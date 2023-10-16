@@ -8,7 +8,7 @@ namespace ModernAppliances
     /// Manager class for Modern Appliances
     /// </summary>
     /// <remarks>Authors: Amadou, Diallo, Alex Lam, Senketh Makala, Group 9</remarks>
-    /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. 
+    /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. This includes  
     internal class MyModernAppliances : ModernAppliances
     {
         /// <summary>
@@ -267,15 +267,15 @@ namespace ModernAppliances
                 if (num < Appliances.Count)
                 {
                   
-                    List<int> randomPosition = new List<int>();
-                    while (randomPosition.Count < num)
+                    List<int> randomPositions = new List<int>();
+                    while (randomPositions.Count < num)
                     {
                         int randomIndex = random.Next(Appliances.Count);
-                        randomPosition.Add(randomIndex);
+                        randomPositions.Add(randomIndex);
                     }
 
                    
-                    foreach (int position in randomPosition)
+                    foreach (int position in randomPositions)
                    
                     {
                         foundAppliances.Add(Appliances[position]);
