@@ -8,7 +8,7 @@ namespace ModernAppliances
     /// Manager class for Modern Appliances
     /// </summary>
     /// <remarks>Authors: Amadou, Diallo, Alex Lam, Senketh Makala, Group 9</remarks>
-    /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. This includes  
+    /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. This includes adding a checkout method for a specific appliance,
     internal class MyModernAppliances : ModernAppliances
     {
         /// <summary>
@@ -73,7 +73,7 @@ namespace ModernAppliances
 
             foreach (Appliance appliance in Appliances)
             {
-                if (appliance.Brand.Equals(brandToSearch, StringComparison.OrdinalIgnoreCase))
+                if (appliance.Brand.Equals(brandToSearch))
                 {
                     foundAppliances.Add(appliance);
                 }
