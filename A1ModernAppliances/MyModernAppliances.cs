@@ -7,8 +7,11 @@ namespace ModernAppliances
     /// <summary>
     /// Manager class for Modern Appliances
     /// </summary>
-    /// <remarks>Authors: Amadou, Diallo, Alex Lam, Senketh Makala, Group 9</remarks>
-    /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. This includes adding a checkout method for a specific appliance,
+    /// <remarks>Authors: Group 9: Amadou, Diallo, Alex Lam, Senketh Makala, Oct 20th 2023.</remarks>
+    /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. This includes adding a checkout method, which allows users to check out a specific appliance based on item number and availability.
+    /// Users can also search for appliances by entering a brand name. The program will display a list of appliances that match the entered brand, making it easy for users to find appliances from their preferred brands.
+    /// We also implemented four display methods to showcase the four types of appliances: refrigerators, vacuums, microwaves, and dishwashers. Each display method offers distinct functionality specific to the appliance type, providing users with a customized view of the inventory.
+    /// The last method we implemented into the MyModernAppliances Class is the RandomList() method which makes a list of random appliances based on the number of appliances the users enters.
     internal class MyModernAppliances : ModernAppliances
     {
         /// <summary>
@@ -73,7 +76,7 @@ namespace ModernAppliances
 
             foreach (Appliance appliance in Appliances)
             {
-                if (appliance.Brand.Equals(brandToSearch))
+                if (appliance.Brand.Equals(brandToSearch, StringComparison.OrdinalIgnoreCase))
                 {
                     foundAppliances.Add(appliance);
                 }
@@ -166,11 +169,11 @@ namespace ModernAppliances
             string roomTypeInput = Console.ReadLine();
             char roomType = ' ';
 
-            if (roomTypeInput == "W")
+            if (roomTypeInput.ToUpper() == "W")
             {
                 roomType = 'W';
             }
-            else if (roomTypeInput == "K")
+            else if (roomTypeInput.ToUpper() == "K")
             {
                 roomType = 'K';
             }
