@@ -7,7 +7,7 @@ namespace ModernAppliances
     /// <summary>
     /// Manager class for Modern Appliances
     /// </summary>
-    /// <remarks>Authors: Group 9: Amadou, Diallo, Alex Lam, Senketh Makala, Oct 23th 2023.</remarks>
+    /// <remarks>Authors: Group 9: Amadou, Diallo, Alex Lam, Sanketh Mekala, Oct 23, 2023.</remarks>
     /// Program Description Classes and Inheritence: Our code implements the methods described in the MyModernAppliances Class to complete the ModernAppliances programs functionality. This includes adding a checkout method, which allows users to check out a specific appliance based on item number and availability.
     /// Users can also search for appliances by entering a brand name. The program will display a list of appliances that match the entered brand, making it easy for users to find appliances from their preferred brands.
     /// We also implemented four display methods to showcase the four types of appliances: refrigerators, vacuums, microwaves, and dishwashers. Each display method offers distinct functionality specific to the appliance type, providing users with a customized view of the inventory.
@@ -104,7 +104,7 @@ namespace ModernAppliances
                 {
                     if (appliance is Refrigerator refrigerator)
                     {
-                        if (numberOfDoors == 0 || refrigerator.Doors == numberOfDoors)
+                        if (refrigerator.Doors == numberOfDoors)
                         {
                             foundAppliances.Add(appliance);
                         }
@@ -149,7 +149,7 @@ namespace ModernAppliances
             {
                 if (appliance is Vacuum vacuum)
                 {
-                    if ((voltage == 0 || voltage == vacuum.BatteryVoltage))
+                    if ((voltage == vacuum.BatteryVoltage))
                     {
                         foundAppliances.Add(appliance);
                     }
